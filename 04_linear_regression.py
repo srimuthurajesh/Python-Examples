@@ -20,7 +20,7 @@ y_pred = linreg.predict(X_test)
 print(y_pred)
 
 
-"""LINEAR REGRESSION EXPLNATION
+"""LINEAR REGRESSION EXPLANATION
 	response = intercept + B1x1 + B2x2 +.......+Bnxn
 		where B1,B2,B3 are model coefficients	"""
 #print(linreg.intercept_)		#return intercept
