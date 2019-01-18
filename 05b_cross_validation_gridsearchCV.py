@@ -9,6 +9,8 @@ y = iris.target
 #KNN N=1,31
 n_range = range(1,31)
 n_scores = []
+
+#NO NEED OF for LOOP
 """for n in n_range:
 	knn = KNeighborsClassifier(n_neighbors=n)	
 	scores = cross_val_score(knn, X, y, cv=10 ,scoring='accuracy')
@@ -17,7 +19,7 @@ print(n_scores) """
 
 from sklearn.model_selection import GridSearchCV
 param_grid = dict(n_neighbors=n_range)
-knn = KNeighborsClassifier(n_neighbors=5)
+knn = KNeighborsClassifier(n_neighbors=1)		#i think n value is negligable
 
 #print(param_grid)		#{'n_neighbors': range(1, 31)}
 grid = GridSearchCV(knn, param_grid, cv=10, scoring='accuracy',return_train_score=False)
@@ -36,4 +38,9 @@ plt.xlabel('Value of N')
 plt.ylabel('Accuracy')
 plt.show()
 		
+		
+#examine best model
+print(grid.best_score_)
+print(grid.best_params_)
+print(grid.best_estimator_)		
 	
