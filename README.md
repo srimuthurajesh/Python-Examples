@@ -1,3 +1,3 @@
 # Python-Practice
-Python is one of my pet language, this repo is for example programs
+This repo is for example py programs
 <h3>Random python programs<h3>
