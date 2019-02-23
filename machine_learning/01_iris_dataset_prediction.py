@@ -1,10 +1,12 @@
 from sklearn.datasets import load_iris
+import numpy as np
 
 iris = load_iris()
 #print(iris.target)
 #print(iris.data)
-X=iris.data
-y=iris.target
+
+X=np.array(iris.data)
+y=np.array(iris.target)
 #print(X.shape)
 #print(y.shape)
 

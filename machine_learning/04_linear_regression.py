@@ -6,7 +6,7 @@ X = data[['TV','Radio','Newspaper']]
 y = data['Sales']
 
 from sklearn.model_selection import train_test_split
-X_train,X_test,y_train,y_test = train_test_split(X,y,random_state=4)		#test_size default 25%
+X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.4, random_state=4)		#test_size default 25%(0.4)
 #print(X_train.shape)		#(150, 3)
 #print(y_train.shape)		#(150,)
 #print(X_test.shape)		#(50, 3)
